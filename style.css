@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header {
+    width: 100%;
+    border: none;
+    margin: 0px auto;
+    position: relative;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #fea84d;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-txt {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 0.75em;
+    flex: 1;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    padding-right: 10px;
+}
+
+.search-btn-img {
+    width: 20px;
+    height: auto;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    margin-right: 20px;
+    /* flex: 0 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px; */
+}
+
+.logoimg {
+    width: auto;
+    height: 30px;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+.container {
+    width: 1100px;
+    padding: 20px;
+    background-color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    padding: 0; margin: 0;
+    overflow: hidden;
+    background-color: #fea84d;
+}
+
+.nav ul {
+    display: flex;
+    padding: 0; margin: 0; list-style: none;
+}
+
+.nav li {
+    margin: 0; padding: 0;
+    list-style: none;
+}
+
+.nav li a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: #f2f2f2;
+    color: #fea84d;
+    
+}
