@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-<html lang="kor">
-    <head>
-        <title>main</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="page1.css">
-        <script src="page1.js" defer></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <div class="header-top">
-                    <div class="logo">
-                        <a href="">
-                            <img src="logo.png" alt="logo" class="logoimg">
-                        </a>
-                    </div>
-                    <div class="search">
-                        <form class="search-box" action="" method="">
-                            <input class="search-txt" type="text" name="" placeholder="검색...">
-                            <button class="search-btn" type="submit">
-                                <img src="search-icon.png" alt="search-icon" class="search-btn-img">
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+{% extends "index.html" %}
+{% block section %}
             <div class="menu">
                 <div class="menu1">
                     <a href="">상품 등록</a>
@@ -106,6 +80,4 @@
                     </label>
                 </form>
             </div>
-        </div>
-    </body>
-</html>
+            {% endblock section %}
