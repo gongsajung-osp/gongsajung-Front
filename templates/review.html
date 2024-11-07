@@ -1,0 +1,168 @@
+{% extends "index_2.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/review.css') }}">
+{% endblock %}
+
+{% block ul %}
+{% endblock %}
+
+{% block section %}
+<form class="product-up-category" action="" method="">
+    <select class="product-category1" name="product-category">
+        <option value="" selected disabled>카테고리</option>
+        <option value="ctgr-A">뜨개</option>
+        <option value="ctgr-B">스티커</option>
+        <option value="ctgr-B">문구</option>
+        <option value="ctgr-B">엽서</option>
+        <option value="ctgr-B">도자기</option>
+        <option value="ctgr-B">생활용품</option>
+        <option value="ctgr-B">먹거리</option>
+        <option value="ctgr-B">포스터</option>
+        <option value="ctgr-B">유리</option>
+        <option value="ctgr-B">비즈</option>
+        <option value="ctgr-B">가죽</option>
+        <option value="ctgr-B">펠트</option>
+    </select>
+    <select class="product-category2" name="">
+        <option value="" selected disabled>카테고리</option>
+    </select>
+    <select class="product-category3" name="">
+        <option value="" selected disabled>카테고리</option>
+    </select>
+</form>
+<div class="touched"></div>
+<div class="tap">
+    <div class="tap1">
+        <a href="">상세 설명</a>
+    </div>
+    <div class="tap2">
+        <a href="">리뷰</a>
+    </div>
+    <div class="tap3">
+        <a href="">판매자 정보</a>
+    </div>
+</div>
+<div class="reviews">
+    <div class="view-type">
+        <input type="radio" name="" value="recent">최신순
+        <input type="radio" name="" value="high-rate">별점 높은 순
+        <input type="radio" name="" value="low-rate">별점 낮은 순
+    </div>
+    <div class="review-in">
+        <div class="writer-info">
+            <div class="profile-img"></div>
+            <div class="writer-info-in">
+                <div class="writer-info-in-in">
+                    <p class="writer-name">닉네임</p>
+                    <p class="writer-grade">등급</p>
+                </div>
+                <p class="writer-purchased">블랙 XL 구매</p>
+            </div>
+        </div>
+        <div class="rate-stars">★★★★★</div>
+        <p class="review-content">친구 선물로 샀는데 너무 좋아요~</p>
+        <div class="react">
+            <div class="react-heart">
+                <p class="heart-tag">♥</p>
+                <p class="heart-num">12</p>
+            </div>
+            <div class="react-comment">
+                <p class="comment-tag1">댓글</p>
+                <p class="comment-num">12</p>
+                <p class="comment-tag2">개</p>
+            </div>
+        </div>
+        <div class="view-comment">
+            <div class="comment">
+                <div class="profile-img"></div>
+                <div class="comment-right">
+                    <div class="writer-name">닉네임</div>
+                    <div class="comment-context">배송 얼마나 걸렸나요?</div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="profile-img"></div>
+                <div class="comment-right">
+                    <div class="writer-name">닉네임</div>
+                    <div class="comment-context">실물 색감 어떤가요?</div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="profile-img"></div>
+                <div class="comment-right">
+                    <div class="writer-name">닉네임</div>
+                    <div class="comment-context">화면보다 조금 더 밝아요</div>
+                </div>
+            </div>
+            <form class="write-comment-up" action="" method="">
+                <textarea class="write-comment" name="" cols="80" rows="1" placeholder="댓글 달기..."></textarea>
+            </form>
+        </div>
+    </div>
+    <div class="review-in">
+        <div class="writer-info">
+            <div class="profile-img"></div>
+            <div class="writer-info-in">
+                <div class="writer-info-in-in">
+                    <p class="writer-name">닉네임</p>
+                    <p class="writer-grade">등급</p>
+                </div>
+                <p class="writer-purchased">블랙 XL 구매</p>
+            </div>
+        </div>
+        <div class="rate-stars">★★★★★</div>
+        <div class="review-pic-out">
+            <div class="review-pic"></div>
+            <div class="review-pic"></div>
+        </div>
+        <p class="review-content">친구 선물로 샀는데 너무 좋아요~</p>
+        <div class="react">
+            <div class="react-heart">
+                <p class="heart-tag">♥</p>
+                <p class="heart-num">12</p>
+            </div>
+            <div class="react-comment">
+                <p class="comment-tag1">댓글</p>
+                <p class="comment-num">12</p>
+                <p class="comment-tag2">개</p>
+            </div>
+        </div>
+    </div>
+</div>
+<aside class="relative-product">
+    <p class="aside-title">연관 상품</p>
+    <div class="relative-product-detail">
+        <div class="rp-img"></div>
+        <div class="rp-detail-right">
+            <div class="rp-name">상품명</div>
+            <div class="rp-price">10,000원</div>
+        </div>
+    </div>
+    <div class="relative-product-detail">
+        <div class="rp-img"></div>
+        <div class="rp-detail-right">
+            <div class="rp-name">상품명</div>
+            <div class="rp-price">10,000원</div>
+        </div>
+    </div>
+    <div class="relative-product-detail">
+        <div class="rp-img"></div>
+        <div class="rp-detail-right">
+            <div class="rp-name">상품명</div>
+            <div class="rp-price">10,000원</div>
+        </div>
+    </div>
+    <div class="relative-product-detail">
+        <div class="rp-img"></div>
+        <div class="rp-detail-right">
+            <div class="rp-name">상품명</div>
+            <div class="rp-price">10,000원</div>
+        </div>
+    </div>
+</aside>
+
+
+
+<script src="{{ url_for('static', filename='js/review.js') }}"></script>
+{% endblock section %}

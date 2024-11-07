@@ -1,0 +1,314 @@
+.write-comment, .product-category1, .product-category2, .product-category3{
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    color: #757575;
+}
+
+.context {
+    width: 500px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.touched {
+    border-bottom: 1px solid #cccccc;
+    position: fixed;
+    top: 180px;
+    width: 1100px;
+    height: 30px;
+}
+
+.tap1, .tap3 {
+    border: 1px solid #cccccc;
+    background-color: #e6e6e6;
+    width: 125px; height:40px;
+    border-radius: 0 0 150px 150px;
+    margin: 0;
+}
+
+.tap1:hover, .tap2:hover, .tap3:hover {
+    border: 1px solid #fea84d;
+    background-color: #fea84d;
+    width: 125px; height:40px;
+    border-radius: 0 0 150px 150px;
+    margin: 0;
+}
+
+.tap2 {
+    border: 1px solid #fea84d;
+    background-color: #fea84d;
+    width: 125px; height:40px;
+    border-radius: 0 0 150px 150px;
+    margin: 0;
+}
+
+.tap {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding-left: 20px;
+    margin-top: 105px;
+}
+
+.tap div {
+    margin: 0;
+}
+
+.tap a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.product-up-category {
+    display: flex;
+    align-items: left;
+    padding-left: 20px; margin: 40px 0 20px 0;
+    position: fixed;
+    top: 110px;
+}
+
+.product-category1, .product-category2, .product-category3 {
+    margin: 0 20px 0 0; padding: 7px;
+    border: 1.5px solid #cccccc;
+}
+
+.fixed {
+    position: fixed;
+    top: 210px;
+    left: 0;
+}
+
+.view-type {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #757575;
+    background-color: #cccccc;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+}
+
+input[type="radio"]:checked, input[type="radio"]:checked::after {
+    background-color: #fea84d;
+    border-color: #fea84d;
+}
+
+.reviews {
+    width: 100%;
+    float: left;
+    max-width: 700px;
+    padding-left: 20px;
+}
+
+.review-in {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    border: 1.5px solid #cccccc;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #757575;
+    margin-right: 10px;
+}
+
+.writer-info {
+    display: flex;
+}
+
+.writer-info-in {
+    /* display: grid;
+    grid-template-columns: 45px 40px;
+    grid-template-rows: 30px 30px;
+    grid-gap: 3px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.writer-info-in-in {
+    display: flex;
+    margin: 0;
+    padding: 5px 0 0 0;
+    align-items: center;
+}
+
+.writer-name {
+    color: black;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.writer-grade {
+    padding: 0;
+    color: #757575;
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0;
+}
+
+.writer-purchased {
+    /* grid-column: span 2; */
+    margin: 5px 0 0 0;
+    padding: 0;
+    color: #cccccc;
+}
+
+.rate-stars {
+    margin-top: 10px;
+    color: #fea84d;
+    margin-left: 60px;
+}
+
+.review-pic-out {
+    display: flex;
+    margin-left: 60px;
+    margin-top: 15px;
+}
+
+.review-pic {
+    width: 70px; height: 70px;
+    cursor: pointer;
+    border-radius: 5%;
+    margin-right: 5px;
+    border: 1px solid #cccccc;
+    background-color: #e6e6e6;
+}
+
+.review-content {
+    margin: 15px 0 0 60px;
+}
+
+.react {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 65px;
+}
+
+.heart-tag, .comment-tag1{
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.heart-num {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.react-heart {
+    display: flex;
+    cursor: pointer;
+}
+
+.react-comment {
+    display: flex;
+    cursor: pointer;
+    padding: 0;
+}
+
+.comment {
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    padding: 15px 10px;
+}
+
+.view-comment {
+    margin-left: 60px;
+    width: 620px;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment .profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #757575;
+    margin-right: 10px;
+}
+
+.comment .writer-name {
+    font-size: 0.8rem;
+}
+
+.write-comment-up {
+    width: 580px;
+    display: flex;
+    align-items: left;
+    padding: 10px 0 10px 40px;
+}
+
+.write-comment {
+    background-color: #e6e6e6;
+    border: none;
+    outline: none;
+    padding: 7px;
+}
+
+.relative-product {
+    /* position: fixed;
+    right: 240px; */
+    width: 28%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #cccccc;
+}
+
+.aside-title {
+    padding-left: 20px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.relative-product-detail {
+    padding-left: 20px;
+    display: flex;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px; padding-bottom: 20px;
+    cursor: pointer;
+}
+
+.rp-img {
+    width: 100px; height: 100px;
+    border: 1px solid #cccccc;
+    background-color: #e6e6e6;
+}
+
+.rp-detail-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.rp-name {
+    font-size: large;
+    padding: 20px 0 10px 10px;
+}
+
+.rp-price {
+    padding: 5px 10px;
+}
