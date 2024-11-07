@@ -12,6 +12,13 @@ header {
   position: relative;
 }
 
+.header {
+  width: 100%;
+  border: none;
+  margin: 0px auto;
+  position: relative;
+}
+
 .header-top {
   display: flex;
   align-items: center;
