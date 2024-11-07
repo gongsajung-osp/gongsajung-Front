@@ -1,0 +1,156 @@
+.header .title {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.breadcrumb {
+  padding: 10px 5%;
+  font-size: 14px;
+  color: #666;
+}
+
+.breadcrumb span {
+  margin-right: 5px;
+}
+
+section {
+  display: flex;
+  margin: 0 5%;
+  padding-top: 20px;
+}
+
+.product-image {
+  width: 45%;
+  height: 280px;
+  /*부모 요소의 높이를 기준으로 하기 때문에
+  * 부모 높이가 정의되어있지 않으면 요소가 표시되지 않을 수 있다
+  * -> 1. 고정된 높이를 height로
+  * -> 2. 부모 요소의 높이를 기준으로
+  */
+  background-color: #545454;
+  margin-right: 5px;
+}
+
+.product-info {
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.product-info h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.product-info .price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-info .shipping {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.product-info .description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  margin-top: 10px;
+}
+
+.button-group button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #ffc74f;
+  border: none;
+  border-radius: 5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.rating span {
+  margin-right: 5px;
+  color: #ffc74f;
+}
+
+aside h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.related-product-item {
+  display: block;
+  border-color: #666;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.related-product-item img {
+  width: 150px;
+  height: 150px;
+  background-color: #333;
+  margin-right: 10px;
+}
+
+.related-product-item .product-name {
+  font-size: 18px;
+  padding-bottom: 2px;
+}
+
+.related-product-item .price {
+  font-size: 15px;
+  color: #555;
+}
+
+.tabs {
+  margin: 20px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  background-color: #ffe4a3;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background-color: #ffc74f;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 0 5%;
+}
+
+.short_description {
+  display: block;
+  padding-top: 10px;
+}
+
+aside {
+  grid-column: 3;
+  position: sticky;
+  /* grid-column은 absolute가 영향을 못 줌 */
+  margin-top: 150px;
+}

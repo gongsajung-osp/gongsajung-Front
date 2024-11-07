@@ -1,74 +1,161 @@
 <!DOCTYPE html>
 <html lang="kor">
-    <head>
-        <title>main</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <div class="header-top">
-                    <div class="logo">
-                        <a href="">
-                            <img src="static/images/logo.png" alt="logo" class="logoimg">
-                        </a>
-                    </div>
-                    <div class="search">
-                        <form class="search-box" action="" method="">
-                            <input class="search-txt" type="text" name="" placeholder="검색...">
-                            <button class="search-btn" type="submit">
-                                <img src="static/images/search-icon.png" alt="search-icon" class="search-btn-img">
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                
-                <ul class="nav">
-                    <li class="">
-                        <a href="">뜨개</a>
-                    </li>
-                    <li class>
-                        <a href="">스티커</a>
-                    </li>
-                    <li class>
-                        <a href="">문구</a>
-                    </li>
-                    <li class>
-                        <a href="">엽서</a>
-                    </li>
-                    <li class>
-                        <a href="">도자기</a>
-                    </li>
-                    <li class>
-                        <a href="">생활용품</a>
-                    </li>
-                    <li class>
-                        <a href="">먹거리</a>
-                    </li>
-                    <li class>
-                        <a href="">포스터</a>
-                    </li>
-                    <li class>
-                        <a href="">유리</a>
-                    </li>
-                    <li class>
-                        <a href="">비즈</a>
-                    </li>
-                    <li class>
-                        <a href="">가죽</a>
-                    </li>
-                    <li class>
-                        <a href="">펠트</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <section>
-            {% block section %}
 
-            {% endblock section %}
-        </section>
-    </body>
+<head>
+  <title>main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+  <div style="grid-column: 1;" class="setting">
+    <img src="static\images\search-icon.png" alt="setting" onclick="showSettingOptions()">
+    <div class="setting_options">
+      <div id="registerItem">상품 등록</div>
+      <div id="purchaseHistory">구매 내역</div>
+      <div id="reviewManagement">리뷰 관리</div>
+      <div id="checkPoints">포인트 조회</div>
+    </div>
+  </div>
+
+  <div style="grid-column: 2;">
+    <header>
+      <div class="header-top">
+        <div class="logo">
+          <a href="">
+            <img src="static/images/logo.png" alt="logo">
+          </a>
+        </div>
+
+        <div class="search">
+          <form class="search-box" action="" method="">
+            <input class="search-txt" type="text" name="" placeholder="검색...">
+            <button class="search-btn" type="submit">
+              <img src="static/images/search-icon.png" alt="search-icon">
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <ul class="nav">
+        <li onmouseover="showSubNav('knit', this)">뜨개</li>
+        <li onmouseover="showSubNav('sticker', this)">스티커</li>
+        <li onmouseover="showSubNav('stationery', this)">문구</li>
+        <li onmouseover="showSubNav('postcard', this)">엽서</li>
+        <li onmouseover="showSubNav('ceramics', this)">도자기</li>
+        <li onmouseover="showSubNav('daily', this)">생활용품</li>
+        <li onmouseover="showSubNav('food', this)">먹거리</li>
+        <li onmouseover="showSubNav('poster', this)">포스터</li>
+        <li onmouseover="showSubNav('glass', this)">유리</li>
+        <li onmouseover="showSubNav('beads', this)">비즈</li>
+        <li onmouseover="showSubNav('leather', this)">가죽</li>
+        <li onmouseover="showSubNav('felt', this)">펠트</li>
+      </ul>
+
+      <div class="sub-nav-bar" id="sub-nav"></div>
+    </header>
+
+    <section class="product-grid">
+      <!-- js를 통해 동적으로 추가 예정 -->
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명{{ name }}</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <a href="#" class="product-link">
+          <div class="product-image"></div>
+        </a>
+        <div class="product-info">
+          <span class="product-name">상품명</span>
+          <span class="product-price">10,000원</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
 </html>
