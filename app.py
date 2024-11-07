@@ -1,15 +1,26 @@
 from flask import Flask, render_template, request
-import sys
 
 application = Flask(__name__)
 
 @application.route("/")
 def hello():
+    return render_template("item.html")
+
+@application.route("/index")
+def view_list():
     return render_template("index.html")
 
-@application.route("/list")
+@application.route("/login")
 def view_list():
-    return render_template("list.html")
+    return render_template("login.html")
+
+@application.route("/item")
+def view_list():
+    return render_template("item.html")
+
+@application.route("/signup")
+def view_list():
+    return render_template("signup.html")
 
 @application.route("/review")
 def view_review():
@@ -23,6 +34,10 @@ def reg_item():
 def reg_review():
     return render_template("reg_reviews.html")
 
+@application.route("/history")
+def view_history():
+    return render_template("history.html")
+
 @application.route("/submit_item")
 def reg_item_submit():
     name=request.args.get("name")
@@ -34,7 +49,7 @@ def reg_item_submit():
     status=request.args.get("status")
     phone=request.args.get("phone")
     print(name,seller,addr,email,category,card,status,phone)
-#return render_template("reg_item.html")
+#main/sub category, prcie 추가로 넘겨야 함
 
 @application.route("/submit_item_post", methods=['POST'])
 def reg_item_submit_post():
@@ -43,11 +58,6 @@ def reg_item_submit_post():
     
     data=request.form
     return render_template("submit_item_result.html", data=data, img_path="static/images/{}".format(image_file.filename))
-
-@application.route("/history")
-def view_history():
-    return render_template("history.html")
-
 
 if __name__=="__main__":
     application.run(host='0.0.0.0',debug=True)
