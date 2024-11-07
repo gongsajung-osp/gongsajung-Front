@@ -6,9 +6,9 @@ application = Flask(__name__)
 def hello():
     return render_template("item.html")
 
-@application.route("/list")
-def view_list():
-    return render_template("list.html")
+@application.route("/index")
+def view_index():
+    return render_template("index.html")
 
 @application.route("/login")
 def view_login():
