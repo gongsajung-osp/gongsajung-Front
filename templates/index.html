@@ -4,7 +4,10 @@
         <title>main</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        {% endblock %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
     </head>
     <body>
         <div class="container">
@@ -19,12 +22,13 @@
                         <form class="search-box" action="" method="">
                             <input class="search-txt" type="text" name="" placeholder="검색...">
                             <button class="search-btn" type="submit">
-                                <img src="static/images/search-icon.png" alt="search-icon" class="search-btn-img">
+                                <img src="static/images/search-icon.png" alt="search-icon">
                             </button>
                         </form>
                     </div>
                 </div>
                 
+                {% block ul %}
                 <ul class="nav">
                     <li class="">
                         <a href="">뜨개</a>
@@ -63,12 +67,13 @@
                         <a href="">펠트</a>
                     </li>
                 </ul>
+                {% endblock %}
             </div>
-        </div>
-        <section>
-            {% block section %}
-
-            {% endblock section %}
-        </section>
+            <section>
+                {% block section %}
+    
+                {% endblock section %}
+            </section>
+        </div> 
     </body>
 </html>

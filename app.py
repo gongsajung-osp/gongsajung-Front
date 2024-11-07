@@ -44,5 +44,10 @@ def reg_item_submit_post():
     data=request.form
     return render_template("submit_item_result.html", data=data, img_path="static/images/{}".format(image_file.filename))
 
+@application.route("/history")
+def view_history():
+    return render_template("history.html")
+
+
 if __name__=="__main__":
     application.run(host='0.0.0.0',debug=True)
