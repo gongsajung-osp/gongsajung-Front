@@ -4,6 +4,10 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
+    return render_template("item.html")
+
+@application.route("/index")
+def view_list():
     return render_template("index.html")
 
 @application.route("/index")
