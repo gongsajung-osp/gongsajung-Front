@@ -37,6 +37,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    padding-top: 30px;
     border-bottom: 1px solid #cccccc;
 }
 
@@ -72,7 +73,7 @@
 
 .purchased-info {
     display: flex;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 10px 0;
 }
 
 .purchased-img {
@@ -96,39 +97,38 @@
     margin-bottom: 7px;
 }
 
-.review-up-top {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 10px;
-}
-
-.review-up-title {
-    flex: 1;
-    border: 1.5px solid #cccccc;
-    margin: 15px 10px 15px 0;
-}
-
-.review-title {
-    border: none;
-    outline: none;
-    padding: 12px;
-}
-
 .review-up-stars {
+    display: flex;
+    padding-bottom: 10px;
     flex: 0 0 auto;
     margin: 15px 10px 15px 0;
 }
 
-.review-stars {
-    padding: 12px;
-    border: 1.5px solid #cccccc;
-    color: #fea84d;
+.star {
+    appearance: none;
+    padding: 1px; margin: 0;
+    cursor: pointer;
 }
 
-.review-stars option {
+.star::after {
+    content: '☆';
     color: #fea84d;
+    font-size: 1.5rem;
 }
+
+.star:hover::after, .star:has(~ .star:hover)::after, .star:checked::after, .star:has(~ .star:checked)::after {
+    content: '★';
+}
+
+.star:checked ~ .star::after {
+    content: '☆';
+}
+
+.star::after ~ .star:checked {
+    content: '☆';
+}
+
+/* 별 체크하고 이후 수정할 때 문제 있음 */
 
 .review-up-context {
     border: 1.5px solid #cccccc;

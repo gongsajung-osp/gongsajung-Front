@@ -36,6 +36,7 @@ input, select, option, textarea, .product-price, .won2, .won, .product-price-in,
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    padding-top: 30px;
     border-bottom: 1px solid #cccccc;
 }
 
@@ -73,15 +74,35 @@ input, select, option, textarea, .product-price, .won2, .won, .product-price-in,
     margin: 0 auto;
 }
 
+.product-info-top {
+    display: flex;
+    align-items: left;
+    padding: 0; margin: 0;
+}
+
 .product-up-category {
     display: flex;
     align-items: left;
     padding: 0; margin: 0;
 }
 
-.product-category1, .product-category2, .product-category3 {
+.product-category1 {
     margin: 15px 20px 15px 0; padding: 7px;
     border: 1.5px solid #cccccc;
+}
+
+.event-tag {
+    display: flex;
+    align-items: left;
+    margin: 15px 20px 15px 0; padding: 7px;
+    border: 1.5px solid #cccccc;
+    width: 100%;
+    max-width: 332px;
+}
+
+.event-name {
+    border: none; outline: none;
+    padding-left: 5px; margin: 0;
 }
 
 .product-up-explain {

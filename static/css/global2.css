@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+input {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
   font-family: 'Pretendard-Regular', sans-serif;
 }
@@ -23,27 +30,44 @@ body {
 
 
 /* 여기부턴 추가한 부분 ~ */
-.header {
+header {
     width: 100%;
     border: none;
     margin: 0px auto;
-    position: relative;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    align-items: center;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    /* padding: 10px 0; */
+    
 }
 
 .header-top {
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 10px 20px;
     background-color: white;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
+    position: relative;
+    /* position: fixed; */
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .search {
-    flex: 1;
+    /* flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: center; */
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
 }
 
 .search-box {
@@ -66,7 +90,7 @@ body {
 }
 
 .search-btn {
-    background-color: transparent;
+    background-color: white;
     border: none;
     cursor: pointer;
     padding: 5px;
@@ -79,12 +103,13 @@ body {
 }
 
 .logo {
-    position: absolute;
+    /* position: absolute;
     left: 20px;
-    margin-right: 20px;
+    margin-right: 20px; */
     /* flex: 0 0 auto;
     margin-top: 20px;
     margin-bottom: 10px; */
+    flex: 0 0 auto;
 }
 
 .logoimg {
@@ -105,4 +130,9 @@ body {
     width: 1100px;
     padding: 20px;
     background-color: white;
+}
+
+section {
+    margin-top: 5.35rem;
+    position: relative;
 }
