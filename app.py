@@ -3,14 +3,6 @@ from flask import Flask, render_template, request
 application = Flask(__name__)
 
 @application.route("/")
-<<<<<<< HEAD
-def hello():
-    return render_template("item.html")
-
-@application.route("/index")
-def view_list():
-    return render_template("index.html")
-=======
 def start():
     return render_template("landing.html")
 
@@ -21,7 +13,6 @@ def view_landing():
 @application.route("/base")
 def view_base():
     return render_template("base.html")
->>>>>>> origin/master
 
 @application.route("/index")
 def view_index():
