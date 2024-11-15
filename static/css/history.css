@@ -1,0 +1,103 @@
+.menu1, .menu3, .menu4 {
+    border: 1px solid #cccccc;
+    background-color: #e6e6e6;
+    width: 125px; height:40px;
+    border-radius: 150px 150px 0 0;
+    margin: 0;
+}
+
+.menu1:hover, .menu2:hover, .menu3:hover, .menu4:hover {
+    border: 1px solid #fea84d;
+    background-color: #fea84d;
+    width: 125px; height:40px;
+    border-radius: 150px 150px 0 0;
+    margin: 0;
+}
+
+.menu2 {
+    border: 1px solid #fea84d;
+    background-color: #fea84d;
+    width: 125px; height:40px;
+    border-radius: 150px 150px 0 0;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding-top: 30px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.menu div {
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.context {
+    width: 500px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.history-item {
+    display: flex;
+    padding: 0 0 20px 0;
+}
+
+.purchase-data {
+    padding: 0; margin: 20px 0 10px 0;
+    text-align: left;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bold;
+}
+
+.purchased-img {
+    width: 100px; height: 100px;
+    border: 1px solid #cccccc;
+    background-color: #e6e6e6;
+    margin-right: 10px;
+}
+
+.purchased-info-in {
+    margin-left: 10px;
+}
+
+.purchased-name {
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.deli-status {
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.history {
+    border-bottom: 1.5px solid #cccccc;
+}
+
+.deli-status-check, .review-write-btn {
+    border: 1px solid black;
+    background-color: white;
+    margin-right: 10px;
+    width: 100px;
+    justify-content: center;
+    padding: 3px 0;
+    cursor: pointer;
+}
+
+.history-btn {
+    display: flex;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Tiger Market{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="left">
+        <span class="setting">
+          <a href="">
+            <img src="static/images/search-icon.png" alt="setting icon" onclick="settingToggleDropdown(event)">
+          </a>
+          <ul class="dropdown-setting">
+            <li><a href="#">상품 등록</a></li><br>
+            <li><a href="#">구매 내역</a></li><br>
+            <li><a href="#">리뷰 관리</a></li><br>
+            <li><a href="#">포인트 조회</a></li>
+          </ul>
+        </span>
+      </div>
+
+      <div class="main">
+        <div class="search-container">
+          <span class="logo">
+            <a href="/index">
+              <img src="static/images/logo.png" alt="logo">
+            </a>
+          </span>
+          <form class="search-box" action="/search" method="GET">
+            <input type="text" placeholder="검색..." name="query">
+            <button class="search-btn" type="submit">
+              <img src="static/images/search-icon.png" alt="search-icon">
+            </button>
+          </form>
+        </div>
+
+        <nav>
+          <div class="nav-item">
+            <button>의류</button>
+            <ul class="dropdown-nav">
+              <li><a href="#">상의</a></li>
+              <li><a href="#">하의</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <button>의류</button>
+            <ul class="dropdown-nav">
+              <li><a href="#">상의</a></li>
+              <li><a href="#">하의</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <button>의류</button>
+            <ul class="dropdown-nav">
+              <li><a href="#">상의</a></li>
+              <li><a href="#">하의</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <button>의류</button>
+            <ul class="dropdown-nav">
+              <li><a href="#">상의</a></li>
+              <li><a href="#">하의</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <button>의류</button>
+            <ul class="dropdown-nav">
+              <li><a href="#">상의</a></li>
+              <li><a href="#">하의</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </div>
+          <div class="nav-item">
+            <button>의류</button>
+            <ul class="dropdown-nav">
+              <li><a href="#">상의</a></li>
+              <li><a href="#">하의</a></li>
+              <li><a href="#">아우터</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <main>
+          {% block content %}{% endblock %}
+        </main>
+      </div>
+
+      <div class="right"></div>
+    </div>
+  </header>
+
+  {% block content2 %}{% endblock %}
+  <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+</body>
+</html>

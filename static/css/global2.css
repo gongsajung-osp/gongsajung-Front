@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+input {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Pretendard-Regular', sans-serif;
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+} 
+
+
+/* 여기부턴 추가한 부분 ~ */
+header {
+    width: 100%;
+    border: none;
+    margin: 0px auto;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    align-items: center;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    /* padding: 10px 0; */
+    
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    position: relative;
+    /* position: fixed; */
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.search {
+    /* flex: 1;
+    display: flex;
+    justify-content: center; */
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #fea84d;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-txt {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 0.75em;
+    flex: 1;
+}
+
+.search-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    padding-right: 10px;
+}
+
+.search-btn img {
+    width: 20px;
+    height: auto;
+}
+
+.logo {
+    /* position: absolute;
+    left: 20px;
+    margin-right: 20px; */
+    /* flex: 0 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px; */
+    flex: 0 0 auto;
+}
+
+.logoimg {
+    width: auto;
+    height: 30px;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+
+.container {
+    width: 1100px;
+    padding: 20px;
+    background-color: white;
+}
+
+section {
+    margin-top: 5.35rem;
+    position: relative;
+}

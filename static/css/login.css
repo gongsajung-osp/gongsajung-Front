@@ -1,0 +1,69 @@
+body {
+  background-color: #ffc274;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* 중간 칸을 채우기 위해 조정 */
+  max-width: 400px; /* 로그인 폼의 너비 제한 */
+}
+
+.mascot-icon {
+  width: 200px;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form button {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 3px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-form button {
+  background-color: #333;
+  color: #fff;
+}
+
+.login-form button:hover {
+  cursor:pointer;
+  background-color: #000000;
+  color:white;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 250px;
+  font-size: 14px;
+  color:black;
+  margin-top: 10px;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+  cursor:pointer;
+}

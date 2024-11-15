@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Pretendard-Regular', sans-serif;
+}
+
+header {
+  margin: 50px 0 -10px 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.left,
+.right {
+  width: 25%;
+}
+
+.setting img {
+  width:150px;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}
+
+.dropdown-setting {
+  list-style: none;
+  position: fixed;
+  bottom: 200px;
+}
+
+.dropdown-setting li {
+  visibility: hidden; /*none이 아니라 hidden임*/
+}
+
+.dropdown-setting li a{
+  /*색이 변했던 것은 a태그 때문이기 때문에 li가 아니라 a에 color 적용*/
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.main {
+  width: 50%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.logo img {
+  width: 200px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #FFA500;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.search-box input[type="text"] {
+  border: none;
+  /*기본 border*/
+  outline: none;
+  /*클릭시 나타나는 border*/
+  padding: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.search-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FFA500;
+  padding: 10px 0;
+  margin-top: 20px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.dropdown-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 0;
+  min-width: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.dropdown-nav li {
+  list-style: none;
+  margin: 0;
+}
+
+.dropdown-nav li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-nav li a:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-item:hover .dropdown-nav {
+  display: block;
+}
