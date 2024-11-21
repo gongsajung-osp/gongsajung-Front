@@ -103,7 +103,7 @@ button{
 
 .about-product {
     /* margin-top: 3.5rem; */
-    width: 100%;
+    width: 90%;
     /* float: left; */
     max-width: 800px;
     padding-left: 20px;
@@ -182,7 +182,7 @@ button{
     max-width: 700px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     padding: 20px;
     border: 1.5px solid #cccccc;
     margin: 20px 0 0 20px;
@@ -196,21 +196,42 @@ button{
     margin-bottom: 20px;
 }
 
-input[type="radio"] {
-    appearance: none;
-    width: 10px;
-    height: 10px;
+.view-type input {
+    margin-right: 50px;
+}
+
+#vt1, #vt2, #vt3 {
+    display: none;
+}
+
+#vt1 + label, #vt2 + label, #vt3 + label {
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     border: 1px solid #757575;
     background-color: #cccccc;
     outline: none;
     cursor: pointer;
     align-items: center;
+    margin-right: 5px;
 }
 
-input[type="radio"]:checked, input[type="radio"]:checked::after {
+#vt1 + label + label, #vt2 + label + label, #vt3 + label + label {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#vt1:checked + label, #vt2:checked + label, #vt3:checked + label {
     background-color: #fea84d;
     border-color: #fea84d;
+    cursor: pointer;
+}
+
+#vt1:checked + label + label, #vt2:checked + label + label, #vt3:checked + label + label {
+    position: relative;
+    cursor: pointer;
+    cursor: pointer;
+
 }
 
 #reviews {
@@ -361,6 +382,10 @@ input[type="radio"]:checked, input[type="radio"]:checked::after {
     font-size: 0.8rem;
 }
 
+textarea {
+    resize: none;
+}
+
 .write-comment-up {
     width: 580px;
     display: flex;
@@ -377,7 +402,7 @@ input[type="radio"]:checked, input[type="radio"]:checked::after {
 
 .relative-product {
     position: sticky;
-    top: 13rem;
+    top: 0;
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -486,3 +511,24 @@ input[type="radio"]:checked, input[type="radio"]:checked::after {
 .seller-contact {
     margin: 5px 0;
 }
+
+@media (max-width: 900px) {
+    .relative-product {
+        visibility: hidden;
+    }
+    .about-product, #description, #seller-info, #reviews {
+        width: 120%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .relative-product-detail, .rp-detail-right {
+        flex-direction: column;
+    }
+}
+
+/* @media (max-width: 1200px) {
+    .product-info, .tab-content {
+        width: 40%;
+    }
+} */

@@ -73,7 +73,7 @@
                     <label class="deli-type">
                         <input type="checkbox" class="deli-check" name="deli" value="우편"> 우편
                     </label>
-                    <div id="deli-price" class="deli-hidden">
+                    <div id="deli-price" style="visibility: hidden;">
                         <div class="deli-price-A">배송비</div>
                         <div class="deli-price-B">
                             <input class="deli-price-in" type="number" name="">
@@ -87,4 +87,6 @@
                     </label>
                 </form>
             </div>
+
+            <script src="{{ url_for('static', filename='js/reg_items.js') }}"></script>
             {% endblock section %}

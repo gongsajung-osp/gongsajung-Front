@@ -10,6 +10,10 @@ def start():
 def view_landing():
     return render_template("landing.html")
 
+@application.route("/landing_2")
+def view_landing_2():
+    return render_template("landing_2.html")
+
 @application.route("/base")
 def view_base():
     return render_template("base.html")

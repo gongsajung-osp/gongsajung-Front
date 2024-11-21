@@ -7,6 +7,20 @@ input, select, option, textarea, .product-price, .won2, .won, .product-price-in,
     color: #757575;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+    resize: none;
+}
+
 .menu2, .menu3, .menu4 {
     border: 1px solid #cccccc;
     background-color: #e6e6e6;
@@ -198,14 +212,14 @@ input, select, option, textarea, .product-price, .won2, .won, .product-price-in,
     cursor: pointer;
 }
 
-.deli-type:hover {
+.deli-type:hover, .checkbox-active {
     background-color: #fea84d;
     color: white;
     border: 1.5px solid #fea84d;
 }
 
 #deli-price {
-    display: none !important;
+    display: none;
     margin-left: 10px;
     padding: 5px;
     border: 1.5px solid #cccccc;
