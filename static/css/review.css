@@ -50,7 +50,7 @@ button{
     margin: 0;
 }
 
-.tab .active {
+.tab-active {
     border: 1px solid #fea84d;
     background-color: #fea84d;
     width: 125px; height:40px;
@@ -114,9 +114,9 @@ button{
   
   .product-image {
     width: 45%;
-    height: 230px;
+    height: 260px;
     background-color: #545454;
-    margin-right: 10px;
+    margin-right: 20px;
     padding: 30px;
   }
   
@@ -125,7 +125,7 @@ button{
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 30px;
-    height: 230px;
+    /* height: 230px; */
   }
   
   .product-info h2 {
@@ -188,6 +188,18 @@ button{
     margin: 20px 0 0 20px;
   }
 
+  .purchase-btn {
+    padding: 8px 12px;
+    font-size: 1.0rem;
+    background-color: #fea84d;
+    border: none;
+    border-radius: 5px;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+  }
 
 
 .view-type {
@@ -401,8 +413,8 @@ textarea {
 }
 
 .relative-product {
-    position: sticky;
-    top: 0;
+    position: fixed;
+    right: 210px;
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -419,6 +431,7 @@ textarea {
 .relative-product-detail {
     padding-left: 20px;
     display: flex;
+    width: 210px;
     border-bottom: 1px solid #cccccc;
     margin-bottom: 20px; padding-bottom: 20px;
     cursor: pointer;
