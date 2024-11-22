@@ -6,9 +6,17 @@ prev = document.querySelector(".prev");
 next = document.querySelector(".next");
 slideWidth = 850;
 slideMargin = 20;
+// slideAdd = (window.innerWidth - 890) / 2; //#slideShow width
+slideAdd = (1650 - 890) / 2;
 
 let currentSlide = document.querySelector(".current-slide");
 let allSlide = document.querySelector(".all-slide");
+
+// const slideShow = document.querySelector("#slideShow");
+// slideShow.style.width = '${window.innerWidth}px';
+// window.addEventListener("resize", () => {
+//   slideShow.style.width = '${window.innerWidth}px';
+// });
 
 makeClone();
 initfunction();
@@ -23,7 +31,7 @@ function makeClone(){
 
 function initfunction(){
   slides.style.width = (slideWidth + slideMargin) * (slideCount+2) + 400 + "px";
-  slides.style.left = -(slideWidth + slideMargin) + 80 + "px";
+  slides.style.left = -(slideWidth + slideMargin) + slideAdd + "px";
 }
 
 function updateSlideCount() {
@@ -33,11 +41,11 @@ function updateSlideCount() {
 
 setInterval(()=>{
     if (currentIdx <= slideCount-1) {
-        slides.style.left = -(currentIdx+2) * (slideWidth+slideMargin) + 80 + "px";
+        slides.style.left = -(currentIdx+2) * (slideWidth+slideMargin) + slideAdd + "px";
         slides.style.transition = `${0.5}s ease-out`;
       }if (currentIdx === slideCount-1){
         setTimeout(function(){
-          slides.style.left = -(slideWidth + slideMargin) + 80 + "px";
+          slides.style.left = -(slideWidth + slideMargin) + slideAdd + "px";
           slides.style.transition = `${0}s ease-out`;
         },500);
         currentIdx = -1;
@@ -48,11 +56,11 @@ setInterval(()=>{
 
 next.addEventListener('click', function () {
   if (currentIdx <= slideCount-1) {
-    slides.style.left = -(currentIdx+2) * (slideWidth+slideMargin) + 80 + "px";
+    slides.style.left = -(currentIdx+2) * (slideWidth+slideMargin) + slideAdd + "px";
     slides.style.transition = `${0.5}s ease-out`;
   }if (currentIdx === slideCount-1){
     setTimeout(function(){
-      slides.style.left = -(slideWidth + slideMargin) + 80 + "px";
+      slides.style.left = -(slideWidth + slideMargin) + slideAdd + "px";
       slides.style.transition = `${0}s ease-out`;
     },500);
     currentIdx = -1;

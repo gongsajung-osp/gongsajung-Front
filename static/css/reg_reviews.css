@@ -97,6 +97,49 @@
     margin-bottom: 7px;
 }
 
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    text-align: center;
+    width: 5em;
+    margin: 10px 0 20px 0;
+}
+   
+.star-rating input {
+    display: none;
+}
+   
+.star-rating label {
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #fea84d;
+    cursor: pointer;
+    font-family: 'HakgyoansimDunggeunmisoTTF-B';
+    margin-right: 10px;
+}
+   
+.star-rating :checked ~ label {
+    -webkit-text-fill-color: #fea84d;
+}
+   
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    -webkit-text-fill-color: #ffe524;
+    -webkit-text-stroke-color: #ffe524;
+}
+
+@font-face {
+    font-family: 'HakgyoansimDunggeunmisoTTF-B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 
 .review-up-stars {
     display: flex;
     padding-bottom: 10px;
@@ -126,7 +169,7 @@
 
 .star::after ~ .star:checked {
     content: '☆';
-}
+} */
 
 /* 별 체크하고 이후 수정할 때 문제 있음 */
 
@@ -141,6 +184,10 @@
     border: none;
     outline: none;
     padding: 12px;
+}
+
+textarea {
+    resize: none;
 }
 
 .review-img {
